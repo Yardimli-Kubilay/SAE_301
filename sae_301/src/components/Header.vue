@@ -2,7 +2,7 @@
   <header class="app-header">
     <!-- Logo -->
     <div class="logo">
-      <img src="@/assets/Logo_tavue.png" alt="TaVue Logo" />
+      <img src="@/assets/Logo_tavue.webp" alt="TaVue Logo" />
     </div>
 
     <!-- Navigation -->
@@ -17,18 +17,13 @@
       <router-link to="/se-connecter">
         <img src="@/components/icons/Icon_buste.svg" alt="Se connecter" />
       </router-link>
-      <router-link>
+      <router-link to="/enregistrer">
         <img src="@/components/icons/Icon_coeur.svg" alt="Enregistrer" />
       </router-link>
     </div>
   </header>
 </template>
 
-<script>
-export default {
-  name: 'Header'
-}
-</script>
 
 <style scoped>
 .app-header {
@@ -37,17 +32,16 @@ export default {
   align-items: center;
   background-color: #C1B488;
   padding: 10px 20px;
-  height: 150px;
-  flex-shrink: 0;
+  height: 100px;
 }
 
 .logo img {
-  height: 100px; /* Ajustez selon la taille de votre logo */
+  height: 80px; /* Ajustez selon la taille de votre logo */
 }
 
 .nav-menu {
   display: flex;
-  gap: 20px; /* Espace entre les éléments */ 
+  gap: 30px; /* Espace entre les éléments */
 }
 
 .nav-menu a {
@@ -64,4 +58,6 @@ export default {
 .icons img {
   height: 24px; /* Ajustez selon la taille de vos SVG */
 }
+
+
 </style>
