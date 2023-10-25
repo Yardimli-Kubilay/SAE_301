@@ -71,7 +71,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center; /* Centrage horizontal */
-  align-items: center;     /* Centrage vertical */
+  align-items: top;     /* Centrage vertical */
   padding: 20px;
 }
 

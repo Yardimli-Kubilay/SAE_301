@@ -2,25 +2,28 @@
   <header class="app-header">
     <!-- Logo -->
     <div class="logo">
-      <img src="@/assets/Logo_tavue.webp" alt="TaVue Logo" />
+      <router-link to="/">
+        <img src="@/assets/Logo_tavue.webp" alt="TaVue Logo" />
+      </router-link>
     </div>
 
     <!-- Navigation -->
     <nav class="nav-menu">
       <router-link to="/">ACCUEIL</router-link>
-      <router-link to="/personnalisation">PERSONNALISATION</router-link>
-      <router-link to="/lunette">LUNETTE</router-link>
+      <router-link to="/configurateur">PERSONNALISATION</router-link>
+      <router-link to="/produit">LUNETTE</router-link>
     </nav>
 
     <!-- Icons -->
     <div class="icons">
-      <router-link to="/se-connecter">
+      <router-link to="/compte">
         <img src="@/components/icons/Icon_buste.svg" alt="Se connecter" />
       </router-link>
-      <router-link to="/enregistrer">
+      <router-link to="/">
         <img src="@/components/icons/Icon_coeur.svg" alt="Enregistrer" />
       </router-link>
     </div>
+    
   </header>
 </template>
 

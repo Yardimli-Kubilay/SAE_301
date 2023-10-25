@@ -1,75 +1,76 @@
 <script setup>
+import MapOsm from '../components/MapOsm.vue';
 </script>
 
 <template>
-<main>
+  <main>
 
-  <div class="offre">
-    <p class="texte-offre">Offre de lancement : -10% offert d’achat pour tout type de lunette</p>
-  </div>
+      <div class="offre">
+        <p class="texte-offre">Offre de lancement : -10% offert d’achat pour tout type de lunette</p>
+      </div>
 
-  <div class="presentation-lunette">
-    <div class="text-container">
-      <h1 class="h1-coeur">Notre coup de coeur</h1>
-        <p class="p-presentation1">Plongez-vous dans la création,</p>
-        <p class="p-presentation1">forgez votre style.</p>
-        <p class="p-presentation2">Français, raffiné, épuré.</p>
-        <p class="p-presentation1">Pour chaque regard, une histoire à raconter.</p>
-        <p class="more-text1">je personnalise</p>
+      <div class="presentation-lunette">
+        <div class="text-container">
+          <h1 class="h1-coeur">Notre coup de coeur</h1>
+            <p class="p-presentation1">Plongez-vous dans la création,</p>
+            <p class="p-presentation1">forgez votre style.</p>
+            <p class="p-presentation2">Français, raffiné, épuré.</p>
+            <p class="p-presentation1">Pour chaque regard, une histoire à raconter.</p>
+            <router-link to="/configurateur" class="more-text1">je personnalise</router-link>
+        </div>
+        <img class="lunettes-home" src="@/components/icons/lunette_home.svg" alt="lunettes"/>
+      </div>
+
+
+      <div>
+        <h1>L'Essence de TaVue</h1>
+      </div>
+      <div class="container-essence">
+        <div class="img-lunettes-essence">
+          <img class="img-lunettes-essence" src="@/assets/image-lunette_eau.webp" alt="lunette dans l'eau" /> 
+        </div>
+        <div class="text-container-essence">
+          <p>Sublimez chaque regard avec finesse et distinction. Notre mission ?</p>
+          <p>Illuminer votre quotidien avec des lunettes sophistiquées, uniques et abordables.</p>
+          <p>Laissez-vous captiver par la lumière du luxe à portée de main ! Explorez nos designs, et choisissez les lunettes qui refléteront votre essence.</p>
+        </div>
+        <div class="img-lunettes-essence">
+          <img class="img-lunettes-essence" src="@/assets/image-lunette_poser.webp" alt="lunette posée" /> 
+        </div>
     </div>
-    <img class="lunettes-home" src="@/components/icons/lunette_home.svg" alt="lunettes"/>
-  </div>
 
 
-  <div>
-    <h1>L'Essence de TaVue</h1>
-  </div>
-  <div class="container-essence">
-    <div class="img-lunettes-essence">
-      <img class="img-lunettes-essence" src="@/assets/image-lunette_eau.webp" alt="lunette dans l'eau" /> 
+    <div class="modes">
+        <div class="mode-item">
+            <img src="@/components/icons/Icon_paiement.svg" alt="icone paiement" />
+            <p>modes de paiement sécurisé</p>
+        </div>
+        <div class="mode-item">
+            <img src="@/components/icons/Icon_livraison.svg" alt="icone livraison" />
+            <p>modes de livraison sécurisé</p>
+        </div>
     </div>
-    <div class="text-container-essence">
-      <p>Sublimez chaque regard avec finesse et distinction. Notre mission ?</p>
-      <p>Illuminer votre quotidien avec des lunettes sophistiquées, uniques et abordables.</p>
-      <p>Laissez-vous captiver par la lumière du luxe à portée de main ! Explorez nos designs, et choisissez les lunettes qui refléteront votre essence.</p>
+
+
+    <div class="container-coucher-soleil">
+      <div>
+        <img class="img-lunette-coucher-soleil" src="@/assets/lunette_coucher_soleil.webp" alt="lunette fond coucher de soleil" /> 
+      </div>
+      <div class="texte-coucher-soleil">
+        <p>TaVue, la finesse éternelle à votre portée.</p>
+        <p>Explorez une gamme de lunettes raffinées, accessibles, pensées pour les passionnés d'élégance et de design minimaliste.</p>
+      </div>
     </div>
-    <div class="img-lunettes-essence">
-      <img class="img-lunettes-essence" src="@/assets/image-lunette_poser.webp" alt="lunette posée" /> 
+
+
+    <div class="container-lunette-plage">
+        <img class="img-lunette-plage" src="@/assets/image_lunette_plage.webp" alt="lunette a la plage" /> 
+        <router-link to="/configurateur" class="more-text2">je personnalise</router-link>
     </div>
-</div>
 
 
-<div class="modes">
-    <div class="mode-item">
-        <img src="@/components/icons/Icon_paiement.svg" alt="icone paiement" />
-        <p>modes de paiement sécurisé</p>
-    </div>
-    <div class="mode-item">
-        <img src="@/components/icons/Icon_livraison.svg" alt="icone livraison" />
-        <p>modes de livraison sécurisé</p>
-    </div>
-</div>
-
-
-<div class="container-coucher-soleil">
-  <div>
-    <img class="img-lunette-coucher-soleil" src="@/assets/lunette_coucher_soleil.webp" alt="lunette fond coucher de soleil" /> 
-  </div>
-  <div class="texte-coucher-soleil">
-    <p>TaVue, la finesse éternelle à votre portée.</p>
-    <p>Explorez une gamme de lunettes raffinées, accessibles, pensées pour les passionnés d'élégance et de design minimaliste.</p>
-  </div>
-</div>
-
-
-<div class="container-lunette-plage">
-    <img class="img-lunette-plage" src="@/assets/image_lunette_plage.webp" alt="lunette a la plage" /> 
-    <router-link to="/chemin-destination" class="more-text2">je personnalise</router-link>
-</div>
-
-
-
-</main>
+    <MapOsm/>
+  </main>
 </template>
 
 <style scoped>
