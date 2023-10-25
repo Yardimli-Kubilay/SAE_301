@@ -1,5 +1,8 @@
 <script setup>
 import MapOsm from '../components/MapOsm.vue';
+import IconLunetteHome from '../components/icons/IconLunetteHome.vue';
+import IconPaiement from '../components/icons/IconPaiement.vue';
+import IconLivraisonVue from '../components/icons/IconLivraison.vue';
 </script>
 
 <template>
@@ -18,7 +21,9 @@ import MapOsm from '../components/MapOsm.vue';
             <p class="p-presentation1">Pour chaque regard, une histoire à raconter.</p>
             <router-link to="/configurateur" class="more-text1">je personnalise</router-link>
         </div>
-        <img class="lunettes-home" src="@/components/icons/lunette_home.svg" alt="lunettes"/>
+        <div class="lunettes-home">
+          <IconLunetteHome/>
+        </div>
       </div>
 
 
@@ -39,14 +44,13 @@ import MapOsm from '../components/MapOsm.vue';
         </div>
     </div>
 
-
     <div class="modes">
         <div class="mode-item">
-            <img src="@/components/icons/Icon_paiement.svg" alt="icone paiement" />
+            <IconPaiement/>
             <p>modes de paiement sécurisé</p>
         </div>
         <div class="mode-item">
-            <img src="@/components/icons/Icon_livraison.svg" alt="icone livraison" />
+            <IconLivraisonVue/>
             <p>modes de livraison sécurisé</p>
         </div>
     </div>
@@ -68,12 +72,28 @@ import MapOsm from '../components/MapOsm.vue';
         <router-link to="/configurateur" class="more-text2">je personnalise</router-link>
     </div>
 
-
-    <MapOsm/>
+    <div class="maposm">
+      <div>
+        <h2>Les ophtalmologue à montbeliard</h2>
+      </div>
+      <MapOsm/>
+    </div>
+    
   </main>
 </template>
 
 <style scoped>
+h1 {
+margin: 20px;
+}
+h2 {
+margin: 20px;
+}
+.maposm {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
 .offre {
   background: #000;
   height: 39px;
@@ -146,6 +166,11 @@ import MapOsm from '../components/MapOsm.vue';
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
+  position: absolute;
+  left: 50px;
+  bottom: 240px;
+
+
 }
 .more-text2 {
   position: absolute;

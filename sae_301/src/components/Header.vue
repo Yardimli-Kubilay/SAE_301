@@ -1,3 +1,8 @@
+<script setup>
+import IconBuste from './icons/Iconbuste.vue';
+import IconCoeur from './icons/Iconcoeur.vue';
+</script>
+
 <template>
   <header class="app-header">
     <!-- Logo -->
@@ -17,10 +22,10 @@
     <!-- Icons -->
     <div class="icons">
       <router-link to="/compte">
-        <img src="@/components/icons/Icon_buste.svg" alt="Se connecter" />
+        <IconBuste/>
       </router-link>
       <router-link to="/">
-        <img src="@/components/icons/Icon_coeur.svg" alt="Enregistrer" />
+        <IconCoeur/>
       </router-link>
     </div>
     

@@ -1,3 +1,4 @@
+<template>
 <svg width="191" height="95" viewBox="0 0 191 95" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M64.2655 2.02319H128.138V69.013H101.553" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M32.3291 2.02319H55.0692" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
@@ -17,3 +18,4 @@
 <path d="M120.28 20.4303L115.932 15.4513H81.1534L76.806 20.4303" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M103.893 20.4303V25.8619H93.0251V20.4303" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
+</template>

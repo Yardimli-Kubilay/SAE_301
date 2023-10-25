@@ -1,3 +1,15 @@
+<script setup>
+import IconFacebook from '../components/icons/Iconfacebook.vue'
+import IconX from '../components/icons/Iconx.vue'
+import IconPaypal from './icons/IconPaypal.vue';
+import IconVisa from './icons/IconVisa.vue';
+import IconMastercard from './icons/IconMastercard.vue';
+import IconCb from './icons/IconCb.vue';
+import IconChronopost from './icons/IconChronopost.vue';
+import IconMondialRelay from './icons/IconMondialRelay.vue';
+import IconBanquePostale from './icons/IconBanquePostale.vue';
+</script>
+
 <template>
   <footer style="background-color: #C1B488; height: auto;">
     <div class="footer-container">
@@ -15,8 +27,8 @@
       <div class="footer-section">
         <h3>Suivez-nous</h3>
         <ul class="social-icons">
-          <li><img src="@/components/icons/Icon_facebook.svg" alt="Facebook"></li>
-          <li><img src="@/components/icons/Icon_X.svg" alt="X"></li>
+          <li><IconFacebook/></li>
+          <li><IconX/></li>
         </ul>
       </div>
 
@@ -37,10 +49,10 @@
       <div class="footer-section">
         <h3>MODES DE PAIEMENT SÉCURISÉ</h3>
         <ul class="payment-icons">
-          <li><img src="@/components/icons/Icon_paypal.svg" alt="PayPal"></li>
-          <li><img src="@/components/icons/Icon_visa.svg" alt="Visa"></li>
-          <li><img src="@/components/icons/Icon_mastercard.svg" alt="Mastercard"></li>
-          <li><img src="@/components/icons/Icon_cb.svg" alt="CB"></li>
+          <li><IconPaypal/></li>
+          <li><IconVisa/></li>
+          <li><IconMastercard/></li>
+          <li><IconCb/></li>
         </ul>
       </div>
 
@@ -48,9 +60,9 @@
       <div class="footer-section">
         <h3>MODES DE LIVRAISON</h3>
         <ul class="delivery-icons">
-          <li><img src="@/components/icons/Icon_chronopost.svg" alt="Chronopost"></li>
-          <li><img src="@/components/icons/Icon_mondial_relay.svg" alt="Mondial Relay"></li>
-          <li><img src="@/components/icons/Icon_la_banque_postale.svg" alt="La Banque Postale"></li>
+          <li><IconChronopost/></li>
+          <li><IconMondialRelay/></li>
+          <li><IconBanquePostale/></li>
         </ul>
       </div>
       

@@ -1,12 +1,12 @@
 <script setup>
-
+import IconLunetteProduit from '../components/icons/IconLunetteProduit.vue';
 </script>
 
 <template>
     <main>
         <div class="produit-wrapper">
             <div class="lunette-image">
-                <img class="lunettes-produit" src="@/components/icons/Lunette_produit.svg" alt="lunettes"/>
+                <IconLunetteProduit/>
             </div>
             <div class="texte-wrapper">
                 <h1>TaVue LUNETTE CLASSIQUE</h1>

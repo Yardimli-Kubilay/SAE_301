@@ -97,7 +97,6 @@ console.log("postion", position)
 
 <template>
     <div class="container-fluid" style="color:black;">
-        <h5>MapOSM</h5>
         <div class="input-group">
             <button class="btn btn-success form-control">coordonnées : latitude</button> 
             <button class="btn btn-dark form-control">{{ coordMe.latitude}}</button> 
@@ -114,6 +113,7 @@ console.log("postion", position)
 
 <style scoped>
 #map{
+    margin-top: 10px;
     width:100%;
     height: 70vh;
 }

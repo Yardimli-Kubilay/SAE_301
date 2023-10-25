@@ -1,12 +1,7 @@
 <script setup>
-import { ref } from 'vue';
 import { defineProps } from 'vue';
 
-const props = defineProps(['frameColor', 'lensColor', 'branchColor']);
-const frameColor = ref('');
-const lensColor = ref('');
-const branchColor = ref('');
-
+const { frameColor, lensColor, branchColor } = defineProps(['frameColor', 'lensColor', 'branchColor']);
 </script>
 
 <template>

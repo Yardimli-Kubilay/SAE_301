@@ -1,4 +1,5 @@
 <script>
+import IconGithub from '../components/icons/IconGithub.vue';
 import PocketBase from 'pocketbase'
 var connected = false;
 var pocketbase_ip = "";
@@ -71,7 +72,12 @@ export default {
     <button class="connexion-button" v-on:click="register()">S'inscrire</button>
     <button class="connexion-button" v-on:click="login()">Se connecter</button>
     <div class="logo-container">
-    <button class="connexion-button" v-on:click="loginGithub()">Se connecter avec Github <img src="@/components/icons/github-mark.svg" alt="github logo"/></button>
+        <button class="connexion-button" v-on:click="loginGithub()">
+            Se connecter avec Github
+            <div class="image-container">
+                <img class="logogit" src="@/assets/Github-logo.webp" alt="github Logo" />
+            </div>
+        </button>
     </div>
     <p><label id="status"> Vous n'êtes pas connectez </label></p>
 </div>
@@ -106,25 +112,33 @@ input {
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
 }
 .connexion-button {
-    padding: 15px 0;
+    padding: 15px;
     background-color: #ffffff;
     border: none;
     border-radius: 10px;
     font-size: 18px;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Pour centrer les éléments horizontalement */
 }
-.inscription-text {
-    text-align: center;
-    cursor: pointer;
-}
+
 .logo-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100px;
-  width: 300px;
-  background-color: #ffffff;
-  margin: 30px auto;
-  border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.logogit {
+    width: 61px;
+    height: 56px;
+    margin-top: 10px; /* Espace entre le texte et le logo */
+}
+
+.image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 </style>

@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from 'vue';
 import IconLunettebase from '../components/icons/IconLunettebase.vue';
+import IconCoeur from '../components/icons/Iconcoeur.vue';
 import { defineProps } from 'vue';
 
 const { frameColor, lensColor, branchColor } = defineProps(['frameColor', 'lensColor', 'branchColor']);
@@ -31,44 +32,31 @@ const branchColors = [
     { label: 'vert', code: '#009759' }
 ];
 
+const currentFrameColor = ref('#B2B2B2');
+const currentLensColor = ref('#1D1D1B');
+const currentBranchColor = ref('#B2B2B2');
 
-const currentFrameColor = ref('#B2B2B2'); // couleur par défaut
-const currentLensColor = ref('#1D1D1B'); // couleur par défaut
-const currentBranchColor = ref('#B2B2B2'); // couleur par défaut
-
-const changeFrameColor = (color) => {
-    currentFrameColor.value = color;
-    console.log("Frame color changed to:", color);
-};
-
-const changeLensColor = (color) => {
-    currentLensColor.value = color;
-    console.log("Lens color changed to:", color);
-};
-
-const changeBranchColor = (color) => {
-    currentBranchColor.value = color;
-    console.log("Branch color changed to:", color);
+const changeColor = (type, color) => {
+    type.value = color;
 };
 
 const colorSections = [
     {
         title: 'PERSONNALISATION DU CADRE',
         colors: frameColors,
-        changeMethod: changeFrameColor
+        currentColor: currentFrameColor
     },
     {
         title: 'PERSONNALISATION DES VERRES',
         colors: lensColors,
-        changeMethod: changeLensColor
+        currentColor: currentLensColor
     },
     {
         title: 'PERSONNALISATION DES BRANCHES',
         colors: branchColors,
-        changeMethod: changeBranchColor
+        currentColor: currentBranchColor
     }
 ];
-
 </script>
 
 <template>
@@ -80,9 +68,7 @@ const colorSections = [
             <div class="info-section">
                 <h1>Lunette Classique</h1>
                 <h3>TaVue</h3>
-                <router-link to="/">
-                    <img src="@/components/icons/Icon_coeur.svg" alt="Enregistrer" />
-                </router-link>
+                <router-link to="/"><IconCoeur/></router-link>
             </div>
             <div class="color-picker">
                 <section v-for="section in colorSections" :key="section.title">
@@ -92,7 +78,7 @@ const colorSections = [
                             v-for="color in section.colors" 
                             :key="color.label" 
                             :style="{backgroundColor: color.code}" 
-                            @click="section.changeMethod(color.code)"
+                            @click="changeColor(section.currentColor, color.code)"
                         >
                             <span>{{ color.label }}</span>
                         </button>
@@ -108,12 +94,13 @@ const colorSections = [
     </main>
 </template>
 
-
 <style scoped>
 .ligne {
-  height: 1px;
-  background-color: #000;
-  margin: 20px 0;
+    background: #C2A68B;
+    width: 700px;
+    height: 1px;
+    flex-shrink: 0;
+    margin-bottom: 10px;
 }
 .configurator-container {
     display: flex;
@@ -135,7 +122,7 @@ const colorSections = [
 .info-section {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: normal;
     margin-bottom: 20px;
 }
 

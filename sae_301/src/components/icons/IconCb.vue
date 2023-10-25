@@ -1,3 +1,4 @@
+<template>
 <svg width="42" height="30" viewBox="0 0 42 30" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect x="0.814789" width="40.8889" height="30" rx="5" fill="white"/>
 <mask id="mask0_5_346" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="7" y="9" width="15" height="13">
@@ -36,3 +37,4 @@
 </linearGradient>
 </defs>
 </svg>
+</template>
