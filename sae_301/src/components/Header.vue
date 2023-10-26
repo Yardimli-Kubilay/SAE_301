@@ -1,6 +1,7 @@
 <script setup>
 import IconBuste from './icons/Iconbuste.vue';
 import IconCoeur from './icons/Iconcoeur.vue';
+import PocketBase from 'pocketbase'
 
 
 // Import éléments de vue
@@ -9,10 +10,12 @@ import { ref, onMounted } from 'vue';
 import { useRouter } from 'vue-router';
 const router = useRouter()
 
-// Import pocketbase
-import PocketBase from 'pocketbase'
-// Objet pocketBase
-const pb = new PocketBase("http://127.0.0.1:8090");
+var pocketbase_ip = "";
+  //if (import.meta.env.MODE === "production")
+pocketbase_ip = "https://tavue.kubilayyardimli.fr:443";
+
+  //else pocketbase_ip = "http://127.0.0.1:8090/";
+const pb = new PocketBase(pocketbase_ip);
 
 
 // user connecté ? au départ faux
@@ -104,7 +107,7 @@ const deconnect = () => {
       <form v-else class="login-form">
         <input placeholder="Login" v-model="user" class="login-input">
         <input placeholder="Password" type="password" v-model="psw" class="login-input">
-        <button type="button" class="login-btn" @click.prevent="connect">
+        <button type="button" class="btn-login" @click.prevent="connect">
           <i class="fa fa-power-off"></i> Connexion
         </button>
       </form>

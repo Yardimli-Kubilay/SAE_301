@@ -5,28 +5,13 @@ import PocketBase from 'pocketbase';
 const connected = ref(false);
 let pocketbase_ip = "";
 
-if (import.meta.env.MODE === "production")
+//if (import.meta.env.MODE === "production")
   pocketbase_ip = "https://tavue.kubilayyardimli.fr:443";
-else
-  pocketbase_ip = "http://127.0.0.1:8090";
+//else pocketbase_ip = "http://127.0.0.1:8090";
 
 const pb = new PocketBase(pocketbase_ip);
 const currentUser = ref(null);
 
-const login = async () => {
-  await pb.collection("users").authWithPassword(
-    document.getElementById("email").value,
-    document.getElementById("passwd").value
-  );
-
-  if (pb.authStore.isValid) {
-    document.getElementById("status").innerHTML = "Vous etes maintenant connecté(e)";
-    connected.value = true;
-    currentUser.value = pb.authStore.model;
-    document.getElementById("signOut").style.visibility = "hidden";
-    document.getElementById("addPoem").style.visibility = "visible";
-  }
-}
 
 const register = async () => {
   currentUser.value = await pb.collection("users").create({
@@ -34,7 +19,6 @@ const register = async () => {
     password: document.getElementById("passwd").value,
     passwordConfirm: document.getElementById("passwd").value,
     username: document.getElementById("username").value,
-
     name: "John Di",
   });
   

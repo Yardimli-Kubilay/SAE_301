@@ -3,9 +3,9 @@ import IconCoeurVue from '../components/icons/Iconcoeur.vue';
 import { ref } from 'vue';
 import PocketBase from 'pocketbase';
 var pocketbase_ip = "";
-if (import.meta.env.MODE === "production")
-    pocketbase_ip = "https://www.tavue.kubilayyardimli.fr:443"; 
-else pocketbase_ip = "http://127.0.0.1:8090";
+//if (import.meta.env.MODE === "production")
+    pocketbase_ip = "https://tavue.kubilayyardimli.fr:443"; 
+//else pocketbase_ip = "http://127.0.0.1:8090";
 const pb = new PocketBase(pocketbase_ip);
 
 const cadre_couleur = ref('#B2B2B2');
