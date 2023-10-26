@@ -35,7 +35,7 @@
             minZoom: 6          // Zoom mini autorisé
         })
         // projetction de la carte avec centrage aux coordonnées indiquées, avec facteur d'agrandissement
-        .setView([47.495328, 6.8044455], 17)
+        .setView([47.5080704, 6.8007106], 17)
 
         // Création d'un icone
         let myIcon = Leaflet.icon({
@@ -49,47 +49,45 @@
         })
 
         // Ajout d'un marqueur
-        let marker = Leaflet.marker([47.495328, 6.8044455], {icon: myIcon}).addTo(map)
+        let marker = Leaflet.marker([47.5080704, 6.8007106], {icon: myIcon}).addTo(map)
 
         // Ajouter une popup / infobulle
-        marker.bindPopup('Je suis un marker')
+        marker.bindPopup('Ophtalmologue Faivre Maryanne')
 
         // Recentrage de la carte au bout de 5 secondes
         // à une autre position
         setTimeout(
             function() {
-                map.panTo([47.50133850064826, 6.807621746718467])
+                map.panTo([47.51090621948242, 6.799773693084717])
             }, 5000
         )
 
         // ajout nouveau marker
         // à la position de recentrage
-        let marker2 = Leaflet.marker([47.50133850064826, 6.807621746718467], {icon: myIcon}).addTo(map)
+        let marker2 = Leaflet.marker([47.51090621948242, 6.799773693084717], {icon: myIcon}).addTo(map)
 
         // Ajouter une popup / infobulle
-        marker2.bindPopup('Je suis la gendarmerie nationale')
+        marker2.bindPopup('Ophtalmologue Harnist Philippe')
 
     }) // Fin onMounted
 
     // Fonction de détection de la géolocalisation via le navigateur
     const locMe = () => {
-        // geolocalisation du navigateur 
-        // => lorsque la geolocalisation a été faite 
-        //          => appel d'une fonction showLocation
-        navigator.geolocation.getCurrentPosition(showLocation)
-    }
+
+navigator.geolocation.getCurrentPosition(showLocation)
+}
+
     // Fonction appelée par locMe pour charger les valeurs de géolocalisation
     const showLocation = (position) => {
-console.log("postion", position)        
-        // Recuperation latitue longitude
+console.log("postion", position)
+
         coordMe.value.latitude = position.coords.latitude
         coordMe.value.longitude = position.coords.longitude
-        // Recentrage de la carte sur position utilisateur
+
         map.panTo([coordMe.value.latitude, coordMe.value.longitude])
-        // Créer un marker
+
         let markerMe = Leaflet.marker([coordMe.value.latitude, coordMe.value.longitude]).addTo(map) 
-        // Ajouter une popup / infobulle
-        markerMe.bindPopup('Je suis là !!!!')
+
     }
 
 </script>
@@ -98,10 +96,6 @@ console.log("postion", position)
 <template>
     <div class="container-fluid" style="color:black;">
         <div class="input-group">
-            <button class="btn btn-success form-control">coordonnées : latitude</button> 
-            <button class="btn btn-dark form-control">{{ coordMe.latitude}}</button> 
-            <button class="btn btn-success form-control">coordonnées : longitude</button> 
-            <button class="btn btn-dark form-control">{{ coordMe.longitude}}</button> 
             <button class="btn btn-primary form-control" @click="locMe()">Se localiser</button> 
         </div>
         <div class="container-fluid">
@@ -112,6 +106,17 @@ console.log("postion", position)
 </template>
 
 <style scoped>
+.btn {
+    margin-top: 20px;
+    color: black;
+    background: var(--beige-cadre, #EFE5CE); 
+    padding: 10px 20px; 
+    border: 1px solid #000; 
+    cursor: pointer; 
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+}
 #map{
     margin-top: 10px;
     width:100%;
