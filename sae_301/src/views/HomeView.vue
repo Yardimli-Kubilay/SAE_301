@@ -83,9 +83,7 @@ import IconLivraisonVue from '../components/icons/IconLivraison.vue';
 </template>
 
 <style scoped>
-h1 {
-margin: 20px;
-}
+
 h2 {
 margin: 20px;
 }
@@ -137,6 +135,7 @@ margin: 20px;
 }
 
 .text-container {
+  margin-left: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -156,7 +155,8 @@ margin: 20px;
 }
 
 .more-text1 {
-  left: 10px; 
+  margin-top: 20px;
+  width: 200px;
   color: black;
   background: var(--beige-cadre, #EFE5CE); 
   padding: 10px 20px; 
@@ -166,11 +166,6 @@ margin: 20px;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
-  position: absolute;
-  left: 50px;
-  bottom: 240px;
-
-
 }
 .more-text2 {
   position: absolute;
@@ -257,18 +252,5 @@ margin: 20px;
   height: auto; 
 }
 
-.more-text2 {
-  position: absolute;
-  bottom: 50px; 
-  right: 100px; 
-  color: black;
-  background: var(--beige-cadre, #EFE5CE); 
-  padding: 10px 20px; 
-  border: 1px solid #000; 
-  cursor: pointer; 
-  font-size: 20px;
-  text-transform: uppercase;
-  text-decoration: none;
-}
 </style>
 
